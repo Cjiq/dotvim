@@ -11,22 +11,23 @@ Plugin 'gmarik/vundle'
 " list all plugins that you'd like to install here
 Plugin 'kien/ctrlp.vim' " fuzzy find files
 Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
-Plugin 'benmills/vimux'
-Plugin 'tpope/vim-fugitive' " the ultimate git helper
+"Plugin 'benmills/vimux'
+"Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
 Plugin 'chriskempson/base16-vim'
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'powerline/fonts'
+Plugin 'tpope/vim-surround'
 "Plugin 'Valloric/YouCompleteMe'
-Plugin 'rstacruz/sparkup'
+"Plugin 'rstacruz/sparkup'
 " Snipmate and bootstrap snippet support
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
+"Plugin 'garbas/vim-snipmate'
 
-Plugin 'chrisgillis/vim-bootstrap3-snippets'
-Plugin 'honza/vim-snippets'
+"Plugin 'chrisgillis/vim-bootstrap3-snippets'
+"Plugin 'honza/vim-snippets'
 
 call vundle#end()
 filetype plugin indent on 
