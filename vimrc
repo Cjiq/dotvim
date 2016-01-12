@@ -2,11 +2,11 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 " let vundle manage vundle
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " list all plugins that you'd like to install here
 Plugin 'kien/ctrlp.vim' " fuzzy find files
