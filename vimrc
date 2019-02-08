@@ -20,6 +20,8 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'scrooloose/syntastic'
 Plugin 'powerline/fonts'
 Plugin 'tpope/vim-surround'
+Plugin 'lervag/vimtex'
+Plugin 'mattn/emmet-vim'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rstacruz/sparkup'
 " Snipmate and bootstrap snippet support
@@ -76,6 +78,12 @@ set foldmethod=syntax " fold based on indent
 set foldnestmax=10 " deepest fold is 10 levels
 set nofoldenable " don't fold by default
 set foldlevel=1
+
+" show hidden files
+let g:ctrlp_show_hidden = 1
+
+" config LaTeX
+let g:vimtex_view_method = 'zathura'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Keybindings
