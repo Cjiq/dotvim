@@ -22,6 +22,8 @@ Plugin 'powerline/fonts'
 Plugin 'tpope/vim-surround'
 Plugin 'lervag/vimtex'
 Plugin 'mattn/emmet-vim'
+Plugin 'stephenway/postcss.vim'
+Plugin 'fatih/vim-go'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rstacruz/sparkup'
 " Snipmate and bootstrap snippet support
@@ -73,6 +75,9 @@ set clipboard=unnamed
 " faster redrawing
 set ttyfast
 
+" enable spell checking
+set spell
+
 " code folding settings
 set foldmethod=syntax " fold based on indent
 set foldnestmax=10 " deepest fold is 10 levels
@@ -84,6 +89,10 @@ let g:ctrlp_show_hidden = 1
 
 " config LaTeX
 let g:vimtex_view_method = 'zathura'
+
+" GOLANG
+let	g:go_fmt_command = "goimports" 
+let g:go_metalinter_autosave = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Keybindings
