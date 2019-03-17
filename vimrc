@@ -75,9 +75,6 @@ set clipboard=unnamed
 " faster redrawing
 set ttyfast
 
-" enable spell checking
-set spell
-
 " code folding settings
 set foldmethod=syntax " fold based on indent
 set foldnestmax=10 " deepest fold is 10 levels
@@ -101,5 +98,7 @@ let g:go_metalinter_autosave = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Keybindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-inoremap C-jk <ESC>
+" Toggle spell checking
+nnoremap <leader>ss :set spell!<Enter>
+" Reload vimrc
+nnoremap <leader>rr :source ~/.vim/vimrc<Enter>
