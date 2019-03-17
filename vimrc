@@ -10,16 +10,17 @@ Plugin 'VundleVim/Vundle.vim'
 
 " list all plugins that you'd like to install here
 Plugin 'kien/ctrlp.vim' " fuzzy find files
-Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
+"Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 "Plugin 'benmills/vimux'
 "Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
-Plugin 'chriskempson/base16-vim'
+"Plugin 'chriskempson/base16-vim'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'scrooloose/syntastic'
 Plugin 'powerline/fonts'
 Plugin 'tpope/vim-surround'
+Plugin 'fatih/vim-go'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rstacruz/sparkup'
 " Snipmate and bootstrap snippet support
@@ -76,6 +77,12 @@ set foldmethod=syntax " fold based on indent
 set foldnestmax=10 " deepest fold is 10 levels
 set nofoldenable " don't fold by default
 set foldlevel=1
+
+
+" insert line above or below line without insert mode
+nnoremap <leader>o :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <leader>O :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Keybindings
