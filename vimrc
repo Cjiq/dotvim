@@ -20,6 +20,9 @@ Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'scrooloose/syntastic'
 Plugin 'powerline/fonts'
 Plugin 'tpope/vim-surround'
+Plugin 'lervag/vimtex'
+Plugin 'mattn/emmet-vim'
+Plugin 'stephenway/postcss.vim'
 Plugin 'fatih/vim-go'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rstacruz/sparkup'
@@ -72,17 +75,28 @@ set clipboard=unnamed
 " faster redrawing
 set ttyfast
 
+" enable spell checking
+set spell
+
 " code folding settings
 set foldmethod=syntax " fold based on indent
 set foldnestmax=10 " deepest fold is 10 levels
 set nofoldenable " don't fold by default
 set foldlevel=1
 
-
 " insert line above or below line without insert mode
 nnoremap <leader>o :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <leader>O :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
+" show hidden files
+let g:ctrlp_show_hidden = 1
+
+" config LaTeX
+let g:vimtex_view_method = 'zathura'
+
+" GOLANG
+let	g:go_fmt_command = "goimports" 
+let g:go_metalinter_autosave = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Keybindings
