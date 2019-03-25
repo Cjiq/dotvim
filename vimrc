@@ -10,11 +10,11 @@ Plugin 'VundleVim/Vundle.vim'
 
 " list all plugins that you'd like to install here
 Plugin 'kien/ctrlp.vim' " fuzzy find files
-Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
+"Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 "Plugin 'benmills/vimux'
 "Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
-Plugin 'chriskempson/base16-vim'
+"Plugin 'chriskempson/base16-vim'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'scrooloose/syntastic'
@@ -62,8 +62,10 @@ set autoread " detect when a file is changed
 
 " make backspace behave in a sane manner
 set backspace=indent,eol,start
+
 " set a map leader for more key combos
 let mapleader = ',' 
+
 " Tab control
 "set noexpandtab " tabs ftw
 set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
@@ -77,14 +79,15 @@ set clipboard=unnamed
 " faster redrawing
 set ttyfast
 
-" enable spell checking
-"set spell
-
 " code folding settings
 set foldmethod=syntax " fold based on indent
 set foldnestmax=10 " deepest fold is 10 levels
 set nofoldenable " don't fold by default
 set foldlevel=1
+
+" insert line above or below line without insert mode
+nnoremap <leader>o :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <leader>O :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 " show hidden files
 let g:ctrlp_show_hidden = 1
@@ -102,5 +105,7 @@ command MTD :silent !md-to-pdf % | xargs zathura > /dev/null &
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Keybindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-inoremap C-jk <ESC>
+" Toggle spell checking
+nnoremap <leader>ss :set spell!<Enter>
+" Reload vimrc
+nnoremap <leader>rr :source ~/.vim/vimrc<Enter>
