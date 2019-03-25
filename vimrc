@@ -24,6 +24,8 @@ Plugin 'lervag/vimtex'
 Plugin 'mattn/emmet-vim'
 Plugin 'stephenway/postcss.vim'
 Plugin 'fatih/vim-go'
+" Plugin 'vim-pandoc/vim-pandoc'
+" Plugin 'vim-pandoc/vim-pandoc-syntax'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rstacruz/sparkup'
 " Snipmate and bootstrap snippet support
@@ -76,7 +78,7 @@ set clipboard=unnamed
 set ttyfast
 
 " enable spell checking
-set spell
+"set spell
 
 " code folding settings
 set foldmethod=syntax " fold based on indent
@@ -93,6 +95,9 @@ let g:vimtex_view_method = 'zathura'
 " GOLANG
 let	g:go_fmt_command = "goimports" 
 let g:go_metalinter_autosave = 1
+
+" MD to PDF
+command MTD :silent !md-to-pdf % | xargs zathura > /dev/null &
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Keybindings
