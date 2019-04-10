@@ -24,6 +24,7 @@ Plugin 'lervag/vimtex'
 Plugin 'mattn/emmet-vim'
 Plugin 'stephenway/postcss.vim'
 Plugin 'fatih/vim-go'
+Plugin 'chrisbra/Colorizer'
 " Plugin 'vim-pandoc/vim-pandoc'
 " Plugin 'vim-pandoc/vim-pandoc-syntax'
 "Plugin 'Valloric/YouCompleteMe'
@@ -78,6 +79,8 @@ set clipboard=unnamed
 
 " faster redrawing
 set ttyfast
+set lazyredraw
+set nocursorline
 
 " code folding settings
 set foldmethod=syntax " fold based on indent
@@ -86,8 +89,11 @@ set nofoldenable " don't fold by default
 set foldlevel=1
 
 " insert line above or below line without insert mode
-nnoremap <leader>o :set paste<CR>m`o<Esc>``:set nopaste<CR>
-nnoremap <leader>O :set paste<CR>m`O<Esc>``:set nopaste<CR>
+"nnoremap <leader>o :set paste<CR>m`o<Esc>``:set nopaste<CR>
+"nnoremap <leader>O :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
+nnoremap <leader>o :normal o- <ENTER>i 
+nnoremap <leader>O :normal O- <ENTER>i 
 
 " show hidden files
 let g:ctrlp_show_hidden = 1
